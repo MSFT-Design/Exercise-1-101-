@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Books Library</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #1e1e1e;
+      color: #fff;
+      padding: 2rem;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #ccc;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    ul.card-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    li.card {
+      background-color: #2a2a2a;
+      border-radius: 8px;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      background-color: #0078d4;
+      flex-shrink: 0;
+    }
+
+    .card-body {
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .card-subtitle {
+      font-size: 0.875rem;
+      color: #aaa;
+      margin: 0;
+    }
+
+    .card-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .card-actions button {
+      background-color: #3a3a3a;
+      color: white;
+      border: 1px solid #555;
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-size: 0.875rem;
+    }
+
+    .card-actions button:hover {
+      background-color: #555;
+    }
+
+    .card-actions button:first-child {
+      background-color: #0078d4;
+      border: none;
+    }
+
+    .see-all {
+      float: right;
+      font-size: 0.875rem;
+      color: #66aaff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <section aria-labelledby="library-heading">
+    <h2 id="library-heading" role="heading" aria-level="2">
+      Recommended by your library
+      <a class="see-all" href="#">See all</a>
+    </h2>
+    <p>Curated by the library staff</p>
+    <ul class="card-list" data-section aria-label="Recommended books">
+      <li class="card" role="listitem" aria-label="Book 1 of 3: Dune by Frank Herbert">
+        <div class="avatar" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3 class="card-title" id="book1-title">Dune</h3>
+          <p class="card-subtitle" id="book1-desc">Frank Herbert</p>
+        </div>
+        <div class="card-actions">
+          <button tabindex="0" aria-labelledby="book1-title" aria-label="Buy Dune">Buy</button>
+          <button tabindex="-1" aria-describedby="book1-title book1-desc" aria-label="Learn more about Dune by Frank Herbert">Learn More</button>
+        </div>
+      </li>
+
+      <li class="card" role="listitem" aria-label="Book 2 of 3: 1984 by George Orwell">
+        <div class="avatar" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3 class="card-title" id="book2-title">1984</h3>
+          <p class="card-subtitle" id="book2-desc">George Orwell</p>
+        </div>
+        <div class="card-actions">
+          <button tabindex="-1" aria-label="Buy 1984">Buy</button>
+          <button tabindex="-1" aria-describedby="book2-title book2-desc" aria-label="Learn more about 1984 by George Orwell">Learn More</button>
+        </div>
+      </li>
+
+      <li class="card" role="listitem" aria-label="Book 3 of 3: The Hobbit by J.R.R. Tolkien">
+        <div class="avatar" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3 class="card-title" id="book3-title">The Hobbit</h3>
+          <p class="card-subtitle" id="book3-desc">J.R.R. Tolkien</p>
+        </div>
+        <div class="card-actions">
+          <button tabindex="-1" aria-label="Buy The Hobbit">Buy</button>
+          <button tabindex="-1" aria-describedby="book3-title book3-desc" aria-label="Learn more about The Hobbit by J.R.R. Tolkien">Learn More</button>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="newarrivals-heading">
+    <h2 id="newarrivals-heading" role="heading" aria-level="2">
+      Featured New Arrivals
+      <a class="see-all" href="#">See all</a>
+    </h2>
+    <p>Handpicked by our editorial team</p>
+    <ul class="card-list" data-section aria-label="New arrival books">
+      <li class="card" role="listitem" aria-label="Book 1 of 3: Project Hail Mary by Andy Weir">
+        <div class="avatar" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3 class="card-title" id="book4-title">Project Hail Mary</h3>
+          <p class="card-subtitle" id="book4-desc">Andy Weir</p>
+        </div>
+        <div class="card-actions">
+          <button tabindex="0" aria-label="Buy Project Hail Mary">Buy</button>
+          <button tabindex="-1" aria-describedby="book4-title book4-desc" aria-label="Learn more about Project Hail Mary by Andy Weir">Learn More</button>
+        </div>
+      </li>
+
+      <li class="card" role="listitem" aria-label="Book 2 of 3: The Midnight Library by Matt Haig">
+        <div class="avatar" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3 class="card-title" id="book5-title">The Midnight Library</h3>
+          <p class="card-subtitle" id="book5-desc">Matt Haig</p>
+        </div>
+        <div class="card-actions">
+          <button tabindex="-1" aria-label="Buy The Midnight Library">Buy</button>
+          <button tabindex="-1" aria-describedby="book5-title book5-desc" aria-label="Learn more about The Midnight Library by Matt Haig">Learn More</button>
+        </div>
+      </li>
+
+      <li class="card" role="listitem" aria-label="Book 3 of 3: Atomic Habits by James Clear">
+        <div class="avatar" aria-hidden="true"></div>
+        <div class="card-body">
+          <h3 class="card-title" id="book6-title">Atomic Habits</h3>
+          <p class="card-subtitle" id="book6-desc">James Clear</p>
+        </div>
+        <div class="card-actions">
+          <button tabindex="-1" aria-label="Buy Atomic Habits">Buy</button>
+          <button tabindex="-1" aria-describedby="book6-title book6-desc" aria-label="Learn more about Atomic Habits by James Clear">Learn More</button>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <script>
+    // Arrow key navigation through buttons within each section
+    document.querySelectorAll('[data-section]').forEach(section => {
+      section.addEventListener('keydown', e => {
+        const focusables = Array.from(section.querySelectorAll('button'));
+        const currentIndex = focusables.indexOf(document.activeElement);
+
+        if (['ArrowRight', 'ArrowDown'].includes(e.key)) {
+          e.preventDefault();
+          const next = focusables[currentIndex + 1] || focusables[0];
+          next.focus();
+        }
+
+        if (['ArrowLeft', 'ArrowUp'].includes(e.key)) {
+          e.preventDefault();
+          const prev = focusables[currentIndex - 1] || focusables[focusables.length - 1];
+          prev.focus();
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
